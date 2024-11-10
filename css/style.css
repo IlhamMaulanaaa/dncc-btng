@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background-image: url('../images/background.jpg');
+  background-repeat: repeat;
+  background-size: 350px 350px;
+}
+
+nav {
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+}
+
+.project-section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar-transparent {
+  background-color: rgba(255, 255, 255, 0); /* Transparan */
+}
+
+.navbar-scrolled {
+  background-color: white; /* Putih saat di-scroll */
+}
+
+.beranda {
+  background-image: url('../images/beranda.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Mengatur arah kolom untuk tata letak vertikal */
+  justify-content: center; /* Memastikan teks berada di tengah */
+  position: relative; /* Membuat elemen relatif untuk posisi tombol */
+  color: white;
+  text-align: center;
+}
+
+.card {
+  height: 30px; /* Sesuaikan tinggi sesuai kebutuhan */
+  display: flex; /* Flexbox untuk tata letak dalam kartu */
+  flex-direction: column; /* Kolom untuk mengatur konten vertikal */
+  justify-content: space-between; /* Menyebar konten secara merata */
+}
+.img-col {
+  padding: 5px; /* Spasi antara gambar */
+}
+.img-col img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#dncc {
+  font-size: clamp(
+    10vw,
+    30vw,
+    30rem
+  ); /* 10vw sebagai ukuran minimum, 30vw sebagai responsif, dan 100px sebagai maksimum */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'New Rocker', cursive;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
+}
+
+/* media screen 768px */
+@media screen and (max-width: 768px) {
+  /* .content-im{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    background-color: #ffffff;
+  } */
+
+  .card-overlay p {
+    width: 100% !important; /* Lebar 100% */
+  }
+
+  .card {
+    height: 80px; /* Sesuaikan tinggi sesuai kebutuhan */
+    flex-direction: row; /* Baris untuk mengatur konten horizontal */
+  }
+  .img-col {
+    width: 40%; /* Lebar gambar 40% */
+  }
+  .img-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Jarak antar ikon */
+  }
+
+  .social-media i {
+    font-size: 8rem; /* Membuat ikon lebih besar */
+  }
+
+  /* Sembunyikan teks di sebelah ikon */
+
+  .btn-form {
+    width: 100%;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column; /* Kolom untuk tampilan vertikal */
+    align-items: center;
+    gap: 20px; /* Jarak antar elemen */
+  }
+  .card {
+    width: 90%; /* Atur lebar card agar tidak terlalu kecil */
+    height: auto; /* Biarkan height mengikuti konten */
+  }
+  .card img {
+    width: 100%;
+    height: auto; /* Gambar mengikuti ukuran kontainer */
+    object-fit: cover; /* Mengisi kontainer dengan proporsional */
+  }
+  .project-section {
+    height: auto; /* Atur tinggi sesuai konten */
+    padding: 20px; /* Spasi antara konten */
+  }
+  .contact-section {
+    height: auto; /* Atur tinggi sesuai konten */
+    padding: 20px; /* Spasi antara konten */
+    margin: 2rem 0px;
+  }
+  #contact-section form {
+    width: 90%; /* Atur lebar form agar tidak terlalu kecil */
+  }
+  .navbar-brand.d-none.d-lg-block {
+    display: none; /* Sembunyikan BTNG pada layar kecil */
+  }
+  /* Style for overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background for overlay */
+    z-index: 1050; /* Overlay above everything else */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .overlay-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column; /* Arrange menu items in column */
+  }
+
+  .overlay .nav-link {
+    color: white;
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  .overlay .nav-link:hover {
+    color: #f8b400;
+  }
+
+  @media (max-width: 768px) {
+    .carousel-control {
+      padding: 8px; /* Adjust padding for smaller buttons */
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Hide original navbar brand */
+    .navbar-brand.d-none.d-lg-block {
+      display: none;
+    }
+  }
+}
+#overlayMenu {
+  display: none;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-control.prev {
+  left: 10px; /* Position left control */
+}
+.carousel-control.next {
+  right: 10px; /* Position right control */
+}
+
+.overlay img {
+  max-width: 90%; /* Limit width of the image */
+  max-height: 90%; /* Limit height of the image */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Hide the overlay by default */
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1050;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-overlay {
+  position: fixed;
+  bottom: -100%; /* Mulai dari luar layar */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  z-index: 1051; /* Pastikan berada di atas elemen lain */
+  transition: bottom 0.4s ease; /* Animasi muncul dari bawah */
+}
+
+.card-overlay-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.card-overlay.show {
+  bottom: 0; /* Muncul ke atas 80% layar */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.card-overlay img {
+  max-width: 60%; /* Mengatur lebar maksimum gambar 80% dari lebar overlay */
+  max-height: 60vh; /* Mengatur tinggi maksimum gambar agar tidak melebihi tinggi layar */
+  object-fit: contain; /* Memastikan gambar tidak terpotong */
+  margin: 0 auto; /* Menengahkan gambar di dalam overlay */
+  display: block;
+}
+
+.card-overlay h5 {
+  margin-top: 2rem;
+}
+
+.card-overlay .card-overlay-desc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-overlay p {
+  width: 60%;
+}
+
+.custom-img {
+  height: 290px; /* Tinggi tetap */
+  width: auto; /* Lebar otomatis menyesuaikan */
+  object-fit: cover; /* Menjaga proporsi dan menutupi area yang tersedia */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Atur gambar di tengah */
+  align-items: center; /* Atur gambar di tengah secara vertikal */
+  height: 290px; /* Tinggi wadah */
+}
+
+/* Responsive untuk layar tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Kontainer Project dan Contact */
+  .project-section,
+  .contact-section {
+    padding: 30px;
+    height: auto; /* Menyesuaikan tinggi dengan konten */
+  }
+
+  /* Navbar */
+  .navbar-brand.d-none.d-lg-block {
+    display: none; /* Sembunyikan elemen "BTNG" */
+  }
+
+  /* Tampilan Kartu */
+  .cards {
+    flex-direction: row; /* Tampilkan card secara horizontal */
+    flex-wrap: wrap;
+    justify-content: center; /* Tengah untuk tampilan tablet */
+    gap: 20px;
+  }
+
+  .card {
+    width: 45%; /* Lebar setiap card disesuaikan agar dua card per baris */
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto; /* Gambar proporsional dengan lebar */
+    object-fit: cover;
+  }
+
+  /* Section Kontak */
+  #contact-section form {
+    width: 80%;
+  }
+}
+
+#beranda-title {
+  font-size: 4rem; /* Default size for h1 */
+  color: white; /* Adjust as needed */
+  text-align: center; /* Center-align for better aesthetics */
+  margin: 20px 0; /* Space around the title */
+}
+
+/* Paragraph styling */
+#beranda-desc {
+  font-size: 1.25rem; /* Default size for paragraph */
+  color: black; /* Ensure the text color is set */
+  width: 30%; /* Limit width for better readability */
+  margin: 10px 0; /* Space around the paragraph */
+}
+
+/* Responsive for tablet devices */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #beranda-title {
+    font-size: 2.5rem; /* Adjust size for tablet */
+  }
+
+  #beranda-desc {
+    font-size: 1rem; /* Adjust size for tablet */
+    width: 26%; /* Adjust width for better readability */
+  }
+
+  .hello {
+    font-size: 2em;
+    text-align: left; /* Pusatkan teks */
+  }
+
+  .intro {
+    text-align: left; /* Pusatkan teks */
+  }
+
+  .description-im {
+    font-size: 0.9em;
+    width: 100%; /* Lebar teks 100% */
+    text-align: justify; /* Pusatkan teks */
+  }
+}
+
+/* Responsive for mobile devices */
+@media screen and (max-width: 768px) {
+  #beranda-title {
+    font-size: 1.8rem; /* More suitable size for mobile */
+  }
+
+  #beranda-desc {
+    font-size: 1rem; /* More suitable size for mobile */
+    text-align: center; /* Center-align text on mobile for better appearance */
+    width: 40%; /* Full width for better readability */
+  }
+}
+
+.container-im {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.content-im {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../images/background.jpg');
+  background-repeat: repeat;
+  background-size: 350px 350px;
+}
+
+.image-section {
+  position: relative;
+  width: 50%;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-im {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  z-index: -1;
+}
+
+.text-section {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro {
+  font-size: 1em;
+  color: gray;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hello {
+  font-size: 3em;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.description-im {
+  font-size: 1em;
+  color: #666666;
+  line-height: 1.6;
+  margin-top: 15px;
+  width: 82%;
+}
+.logos {
+  display: flex; /* Menggunakan flexbox untuk menampilkan logo */
+  justify-content: center; /* Memusatkan logo secara horizontal */
+  flex-wrap: wrap; /* Agar logo bisa membungkus ke baris berikutnya jika terlalu banyak */
+  top: 200px; /* Posisi vertikal di tengah */
+  position: relative;
+}
+
+.logos i {
+  font-size: 30px; /* Ukuran ikon sesuai kebutuhan */
+  margin: 0 10px; /* Jarak antara ikon */
+  color: #000; /* Warna ikon, bisa disesuaikan */
+}
+/* Media query untuk layar kecil (misalnya, smartphone) */
+@media (max-width: 768px) {
+  .container-im {
+    display: flex;
+    flex-direction: column; /* Ubah menjadi kolom untuk tampilan mobile */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+
+  .content-im {
+    display: flex;
+    flex-direction: column; /* Ubah menjadi kolom untuk tampilan mobile */
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/background.jpg');
+    background-repeat: repeat;
+    background-size: cover; /* Sesuaikan ukuran latar belakang */
+  }
+
+  .image-section {
+    width: 100%; /* Gambar memenuhi seluruh lebar */
+    margin: 0; /* Hapus margin */
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto; /* Biarkan tinggi gambar menyesuaikan */
+    object-fit: cover;
+  }
+
+  .overlay-im {
+    position: absolute;
+    top: 0; /* Posisikan overlay di atas gambar */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .text-section {
+    width: 100%;
+    padding: 20px; /* Sesuaikan padding sesuai kebutuhan */
+    text-align: center; /* Pusatkan teks */
+  }
+  .hello {
+    font-size: 2em;
+    text-align: left; /* Pusatkan teks */
+  }
+
+  .intro {
+    text-align: left; /* Pusatkan teks */
+  }
+
+  .description-im {
+    font-size: 0.9em;
+    width: 100%; /* Lebar teks 100% */
+    text-align: justify; /* Pusatkan teks */
+  }
+
+  .logos {
+    display:none;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logo img {
+  max-width: 100px;
+}
+
+.footer-links,
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a,
+.footer-socials a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+.footer-socials i {
+  font-size: 24px;
+}
+
+/* Typing Text CSS */
+#typing-text {
+  display: inline;
+  font-weight: bold;
+}
+
+#typing-text::after {
+  content: '|';
+  display: inline-block;
+  animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
